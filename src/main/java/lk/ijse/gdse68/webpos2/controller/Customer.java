@@ -1,6 +1,5 @@
 package lk.ijse.gdse68.webpos2.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
@@ -9,7 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.gdse68.webpos2.bo.CustomerBOIMPL;
+import lk.ijse.gdse68.webpos2.bo.impl.CustomerBOIMPL;
 import lk.ijse.gdse68.webpos2.dto.CustomerDTO;
 import lk.ijse.gdse68.webpos2.util.ResponseUtil;
 import lk.ijse.gdse68.webpos2.util.Util;

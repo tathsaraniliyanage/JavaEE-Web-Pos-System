@@ -10,6 +10,15 @@ create table customer(
                          email TEXT
 );
 
+create table item(
+                         code VARCHAR(50) primary key,
+                         item_name VARCHAR(255),
+                         qty double,
+                         price double,
+                         description TEXT,
+                         image TEXT
+);
+
 
 
 

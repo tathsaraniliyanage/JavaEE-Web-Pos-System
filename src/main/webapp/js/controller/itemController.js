@@ -50,6 +50,36 @@ function nextItemList() {
 function getDataInPage(currentPage) {
     var itemsPerPage = 7;
 
+    $.ajax({
+        url: 'http://localhost:8080/webpos2_war_exploded/item',
+        method: 'GET',
+        success: function(data) {
+            data.data.map(i=>{
+                item.push(i);
+                
+            })
+            console.log(item)
+            item.map(item => {
+                var row = ` <tr data-itemcode= ${item.code} class="shadow-sm rounded-3 mb-2 " style="" >
+                                <td scope="row" class="d-flex justify-content-center flex-wrap" style="width: 125px"><img src=${item.image} height="70px"></td>
+                                
+                                <td >${item.item_name}</td>
+                                <td >${item.qty}</td>
+                                <td >LKR. ${item.price}</td>
+                                <td >${item.description}</td>
+                                <td><button  data-itemcode= ${item.code} onclick="itemUpdate(this)" style="width: 30px" class="p-1 rounded-3 border-0 mt-3"><i class="fa-regular fa-pen-to-square"></i></button></td>
+                                <td><button  data-itemcode= ${item.code} onclick="itemRemove(this)" style="width: 30px" class="p-1 rounded-3 border-0 mt-3"><i class="fa-solid fa-trash"></i></button></td>
+                              </tr>`;
+                tbody.append(row);
+            });
+           
+            
+        },
+        error: function(error) {
+            alert('Error loading customer data');
+        }
+    });
+
     var startIndex = (currentPage - 1) * itemsPerPage;
     var endIndex = startIndex + itemsPerPage;
     var itemsToShow =  pagination(startIndex,endIndex);
@@ -63,7 +93,7 @@ function getDataInPage(currentPage) {
                         <td >${item.code}</td>
                         <td >${item.item_name}</td>
                         <td >${item.qty}</td>
-                        <td >LKR. ${item.price.toFixed(2)}</td>
+                        <td >LKR. ${item.price}</td>
                         <td >${item.description}</td>
                         <td><button  data-itemcode= ${item.code} onclick="itemUpdate(this)" style="width: 30px" class="p-1 rounded-3 border-0 mt-3"><i class="fa-regular fa-pen-to-square"></i></button></td>
                         <td><button  data-itemcode= ${item.code} onclick="itemRemove(this)" style="width: 30px" class="p-1 rounded-3 border-0 mt-3"><i class="fa-solid fa-trash"></i></button></td>
