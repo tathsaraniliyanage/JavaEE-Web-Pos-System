@@ -6,7 +6,7 @@ The ✅ **Jakarta EE Web POS System** is a robust Point of Sale (POS) applicatio
 
 ## Project Structure
 
-The project adheres to best practices in software development, employing a layered architecture to ensure a clean separation of concerns. This approach promotes maintainability, scalability, and ease of understanding by dividing the system into distinct layers, such as presentation, business logic, and data access.
+The project is structured to follow best practices in software development, employing a layered architecture to ensure a clean separation of concerns. This approach promotes maintainability, scalability, and ease of understanding by dividing the system into distinct layers, such as presentation, business logic, and data access.
 
 ### Key Directories
 
