@@ -1,10 +1,5 @@
 package lk.ijse.gdse68.webpos2.controller;
 
-/**
- * @author Sasindu Malshan
- * @project webpos2
- * @date 8/9/2024
- */
 
 import com.google.gson.Gson;
 import jakarta.json.bind.Jsonb;

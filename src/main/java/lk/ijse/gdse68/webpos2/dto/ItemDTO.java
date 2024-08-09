@@ -6,9 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
- * @author Sasindu Malshan
- * @project webpos2
- * @date 8/9/2024
+ * @author Praboda Thathsarani
+ * @Project webpos2
  */
 @AllArgsConstructor
 @NoArgsConstructor

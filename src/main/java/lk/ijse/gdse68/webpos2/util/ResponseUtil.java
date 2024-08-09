@@ -5,9 +5,8 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * @author Sasindu Malshan
- * @project webpos2
- * @date 8/5/2024
+ * @author Praboda Thathsarani
+ * @Project webpos2
  */
 @NoArgsConstructor
 @AllArgsConstructor
